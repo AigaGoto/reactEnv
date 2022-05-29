@@ -1,0 +1,13 @@
+version: "3"
+
+services: 
+    web:
+        build: .
+        container_name: "node"
+        ports: 
+            - "3000:3000"
+            - "9005:9005" # Firebase login
+        volumes:
+            - ".:/app/"
+        tty: true
+        stdin_open: true
